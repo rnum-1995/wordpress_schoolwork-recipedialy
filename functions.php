@@ -54,3 +54,10 @@ function register_custom_post_type()
 }
 //3. 関数の実行
 add_action('init', 'register_custom_post_type');
+
+
+//パンくずリスト
+function bread_list()
+{
+    if (function_exists('bcn_display')) bcn_display_list();
+}
