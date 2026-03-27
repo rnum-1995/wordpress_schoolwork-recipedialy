@@ -225,6 +225,31 @@ footer {
   line-height: 1.5;
 }
 
+.breadcrumbs {
+  display: flex;
+  /* 横並びにする */
+  flex-wrap: wrap;
+  /* 折り返しを許可 */
+  list-style: none;
+  /* リストの黒丸を消す */
+  padding: 0;
+  /* デフォルトのパディングをリセット */
+  margin: 0;
+}
+
+.breadcrumbs li {
+  display: flex;
+  align-items: center;
+}
+
+/* 区切り文字（ > ）を自動で入れる設定 */
+.breadcrumbs li:not(:last-child)::after {
+  content: ">";
+  margin: 0 0.5rem;
+  color: #ccc;
+  text-decoration: none;
+}
+
 .breadcrumbs a {
   text-decoration: underline;
   transition: opacity 0.3s ease;
