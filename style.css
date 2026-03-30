@@ -491,6 +491,16 @@ footer {
   object-fit: cover;
 }
 
+.wp-pagenavi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-block: 2.5rem;
+  list-style-type: none;
+}
+
+
 
 /* recipe
 ------------------------- */
