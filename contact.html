@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Diary - お問い合わせ</title>
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+  <!-- reset.css ress -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+  <!-- Google Fonts (Noto Sans JP,Philosopher,Kaku Gothic Antique) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Zen+Kaku+Gothic+Antique&display=swap"
+    rel="stylesheet" />
+  <!-- original css -->
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="header-inner wrapper">
+      <p class="logo">
+        <a href="./index.html"><img src="./img/logo.svg" alt="Recipe Diary" /></a>
+      </p>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./recipe-list.html">Recipe</a></li>
+          <li><a href="./news.html">News</a></li>
+        </ul>
+      </nav>
+
+      <button class="ham-btn" id="js-ham-btn">
+        <span class="ham-line"><span class="visually-hidden">メニューを開く</span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <div class="breadcrumbs-wrapper wrapper">
+      <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+        <span><a href="./index.html">Home</a></span> &gt; <span aria-current="page">お問い合わせ</span>
+      </div>
+    </div>
+
+    <div class="wrapper contact-wrapper">
+      <div class="contact-header">
+        <h1 class="title" data-en="Contact">お問い合わせ</h1>
+        <p>
+          フォームからお問い合わせください。<br />
+          通常、2～3営業日以内にご返信いたします。
+        </p>
+      </div>
+
+      <form action="#" method="post">
+        <div class="form-inner">
+          <div class="form-item">
+            <label for="user-name">お名前</label>
+            <input type="text" name="user-name" id="user-name" placeholder="山田 太郎" required />
+          </div>
+
+          <div class="form-item">
+            <label for="user-email">メールアドレス</label>
+            <input type="email" name="user-email" id="user-email" placeholder="example@email.co.jp" required />
+          </div>
+
+          <div class="form-item">
+            <label for="user-tel">電話番号</label>
+            <input type="tel" name="user-tel" id="user-tel" placeholder="09012345678" />
+          </div>
+
+          <div class="form-item">
+            <p>お問い合わせの種類</p>
+            <div class="radio-group">
+              <label>
+                <input type="radio" name="kind" value="1" checked />レシピについて
+              </label>
+
+              <label>
+                <input type="radio" name="kind" value="2" />メディア出演のご依頼
+              </label>
+
+              <label>
+                <input type="radio" name="kind" value="3" />連載・執筆のご依頼
+              </label>
+
+              <label>
+                <input type="radio" name="kind" value="4" />その他
+              </label>
+            </div>
+          </div>
+
+          <div class="form-item">
+            <label for="comment">お問い合わせ内容</label>
+            <textarea name="comment" id="comment" placeholder="お問い合わせ内容を入力してください" required>
+            </textarea>
+          </div>
+        </div>
+
+        <div class="button-wrapper">
+          <input class="button" type="button" value="Back" onclick="history.back()" />
+          <input class="button" type="submit" value="Send" />
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <ul class="footer-nav">
+      <li><a href="./contact.html">お問い合わせ</a></li>
+      <li><a href="./privacy-policy.html">プライバシーポリシー</a></li>
+    </ul>
+    <ul class="sns">
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Twitter</a></li>
+      <li><a href="#">Facebook</a></li>
+    </ul>
+    <small class="copyright">&copy; 2021 Recipe Diary</small>
+  </footer>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

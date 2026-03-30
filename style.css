@@ -323,9 +323,11 @@ footer {
 
 .button-wrapper {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  /* justify-content: center; */
   align-items: center;
   gap: 10px;
+  margin: 0;
 }
 
 /* top
@@ -849,7 +851,8 @@ input[type='radio'] {
     flex-shrink: 0;
   }
 
-  .contact-wrapper>form {
+  .contact-wrapper>.wpcf7 {
     flex-grow: 1;
+    width: 100%;
   }
 }

@@ -13,7 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Zen+Kaku+Gothic+Antique&display=swap"
         rel="stylesheet" />
     <!-- original css -->
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/style.css" />
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css" />
     <?php wp_head(); ?>
 </head>
 

@@ -61,3 +61,7 @@ function bread_list()
 {
     if (function_exists('bcn_display')) bcn_display_list();
 }
+
+
+// Contact Form 7の自動pタグ無効
+add_filter('wpcf7_autop_or_not', '__return_false');
