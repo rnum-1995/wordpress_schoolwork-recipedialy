@@ -1,10 +1,4 @@
 @charset "UTF-8";
-/* 
-Theme Name: Recipe Diary
-Description: レシピサイト「Recipe Diary」オリジナルテーマ
-Version: 1.0
-Author: Ryunosuke Umesaki
-*/
 
 /* common
 ------------------------- */
@@ -225,31 +219,6 @@ footer {
   line-height: 1.5;
 }
 
-.breadcrumbs {
-  display: flex;
-  /* 横並びにする */
-  flex-wrap: wrap;
-  /* 折り返しを許可 */
-  list-style: none;
-  /* リストの黒丸を消す */
-  padding: 0;
-  /* デフォルトのパディングをリセット */
-  margin: 0;
-}
-
-.breadcrumbs li {
-  display: flex;
-  align-items: center;
-}
-
-/* 区切り文字（ > ）を自動で入れる設定 */
-.breadcrumbs li:not(:last-child)::after {
-  content: ">";
-  margin: 0 0.5rem;
-  color: #ccc;
-  text-decoration: none;
-}
-
 .breadcrumbs a {
   text-decoration: underline;
   transition: opacity 0.3s ease;
@@ -323,11 +292,9 @@ footer {
 
 .button-wrapper {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin: 0;
 }
 
 /* top
@@ -491,16 +458,6 @@ footer {
   object-fit: cover;
 }
 
-.wp-pagenavi {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-block: 2.5rem;
-  list-style-type: none;
-}
-
-
 
 /* recipe
 ------------------------- */
@@ -548,15 +505,14 @@ footer {
   padding-block-end: 3.75rem;
 }
 
-
-.recipe-header .recipe-category {
+.recipe-category {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   /* margin-block-end: 0.5rem; */
 }
 
-.recipe-header .recipe-category a {
+.recipe-category a {
   display: inline-block;
   background-color: #f3775f;
   color: #fff;
@@ -567,7 +523,7 @@ footer {
   transition: opacity 0.3s ease;
 }
 
-.recipe-header .recipe-category a:hover {
+.recipe-category a:hover {
   opacity: 0.7;
 }
 
@@ -701,7 +657,7 @@ input[type='radio'] {
   text-decoration: underline;
 }
 
-.about-img img {
+.about-img {
   width: 100%;
   height: 400px;
   object-fit: cover;
@@ -862,8 +818,7 @@ input[type='radio'] {
     flex-shrink: 0;
   }
 
-  .contact-wrapper>.wpcf7 {
+  .contact-wrapper>form {
     flex-grow: 1;
-    width: 100%;
   }
 }

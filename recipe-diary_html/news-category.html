@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Diary - イベント</title>
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+  <!-- reset.css ress -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+  <!-- Google Fonts (Noto Sans JP,Philosopher,Kaku Gothic Antique) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Zen+Kaku+Gothic+Antique&display=swap"
+    rel="stylesheet" />
+  <!-- original css -->
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="header-inner wrapper">
+      <p class="logo">
+        <a href="./index.html"><img src="./img/logo.svg" alt="Recipe Diary" /></a>
+      </p>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./recipe-list.html">Recipe</a></li>
+          <li><a href="./news.html">News</a></li>
+        </ul>
+      </nav>
+      <button class="ham-btn" id="js-ham-btn">
+        <span class="ham-line"><span class="visually-hidden">メニューを開く</span></span>
+      </button>
+    </div>
+  </header>
+  <main>
+    <div class="breadcrumbs-wrapper wrapper">
+      <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+        <span><a href="./index.html">Home</a></span> &gt; <span><a href="./news.html">お知らせ</a></span> &gt; <span aria-current="page">イベント</span>
+      </div>
+    </div>
+    <div class="wrapper">
+      <h1 class="title" data-en="Event">イベント</h1>
+      <ul class="news-list page-news-list">
+        <li>
+          <div class="news-meta">
+            <time datetime="2023-10-15">2023.10.15</time>
+            <ul class="news-category">
+              <li><a href="./news-category.html">イベント</a></li>
+            </ul>
+          </div>
+          <p class="news-title"><a href="./news-detail.html">秋の味覚レシピ特集の公開に合わせて、写真撮影の裏側をご紹介します</a></p>
+        </li>
+        <li>
+          <div class="news-meta">
+            <time datetime="2023-08-01">2023.08.01</time>
+            <ul class="news-category">
+              <li><a href="./news-category.html">イベント</a></li>
+            </ul>
+          </div>
+          <p class="news-title"><a href="./news-detail.html">【オンライン開催】夏のカレー作り教室のお知らせ</a></p>
+        </li>
+      </ul>
+
+      <!-- Pagination -->
+      <ol class="pagination">
+        <li class="pagination-prev"><a href="#"><span>前へ</span></a></li>
+        <li class="pagination-item current"><span>1</span></li>
+        <li class="pagination-item"><a href="#"><span>2</span></a></li>
+        <li class="pagination-item"><a href="#"><span>3</span></a></li>
+        <li class="pagination-next"><a href="#"><span>次へ</span></a></li>
+      </ol>
+    </div>
+    <div class="button-wrapper"><a class="button" href="./index.html">トップに戻る</a></div>
+  </main>
+  <footer>
+    <ul class="footer-nav">
+      <li><a href="./contact.html">お問い合わせ</a></li>
+      <li><a href="./privacy-policy.html">プライバシーポリシー</a></li>
+    </ul>
+    <ul class="sns">
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Twitter</a></li>
+      <li><a href="#">Facebook</a></li>
+    </ul>
+    <small class="copyright">&copy; 2021 Recipe Diary</small>
+  </footer>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
