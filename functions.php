@@ -55,6 +55,44 @@ function register_custom_post_type()
 //3. 関数の実行
 add_action('init', 'register_custom_post_type');
 
+// カスタム投稿タイプ一覧ページの表示件数を設定
+function set_posts_per_page($query)
+{
+    // 管理画面、
+    if (is_admin() || !$query->is_main_query()) return;
+    if ($query->is_post_type_archive('recipe')) $query->set('posts_per_page', '12');
+}
+add_action('pre_get_posts', 'set_posts_per_page');
+
+// レシピ個別ページのパーマリンクを変更
+function custom_recipe_permalink($post_link, $post)
+{
+    if ($post->post_type === 'recipe') {
+        return home_url('/recipe/' . $post->ID . '/');
+    }
+    return $post_link;
+}
+add_filter('post_type_link', 'custom_recipe_permalink', 1, 3);
+
+// パーマリンクのルールを追加
+function add_recipe_rewrite_rule($rules)
+{
+    $new_rules = [
+        'recipe/([0-9]+)/?$' => 'index.php?post_type=recipe&p=$matches[1]',
+    ];
+    return $new_rules + $rules;
+}
+add_filter('rewrite_rules_array', 'add_recipe_rewrite_rule');
+
+// テーマセットアップ
+function setup_theme()
+{
+    // アイキャッチ画像の有効化
+    add_theme_support('post-thumbnails');
+}
+add_action('after_setup_theme', 'setup_theme');
+
+
 
 //パンくずリスト
 function bread_list()
@@ -64,4 +102,8 @@ function bread_list()
 
 
 // Contact Form 7の自動pタグ無効
-add_filter('wpcf7_autop_or_not', '__return_false');
+function wpcf7_autop_return_false()
+{
+    return false;
+}
+add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
